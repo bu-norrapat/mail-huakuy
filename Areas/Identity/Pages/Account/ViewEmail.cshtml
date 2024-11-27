@@ -1,0 +1,20 @@
+﻿@page
+@model ViewEmailModel
+@{
+    ViewData["Title"] = "View Email";
+}
+
+<div class="email-view">
+    <h2>Subject : @Model.EmailSubject</h2>
+    <p><strong>From:</strong> @Model.EmailSender</p>
+    <p><strong>Date:</strong> @Model.EmailDate</p>
+
+    <div class="email-message">
+        <p><strong>Message:</strong></p>
+        <div style="max-height: 400px; overflow-y: auto; border: 1px solid #ccc; padding: 10px;">
+            <pre style="white-space: pre-wrap; word-wrap: break-word;">@Model.EmailMessage</pre>
+        </div>
+    </div>
+
+    <a class="btn btn-primary btn-sm" href="/Index">Back to Inbox</a>
+</div>
